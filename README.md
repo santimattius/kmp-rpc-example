@@ -1,4 +1,4 @@
-# KMP Compose Gradle Skeleton
+# Kotlinx rpc example using KMP and Compose Multiplatform
 
 This is a Kotlin Multiplatform project targeting Android, iOS.
 
