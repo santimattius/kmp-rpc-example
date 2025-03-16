@@ -1,5 +1,10 @@
 # Kotlinx rpc example using KMP and Compose Multiplatform
 
+kotlinx.rpc is a Kotlin library for adding asynchronous Remote Procedure Call (RPC) services to your
+applications. Build your RPC with already known language constructs and nothing more!
+
+## Project
+
 This is a Kotlin Multiplatform project targeting Android, iOS.
 
 * `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
@@ -13,6 +18,9 @@ This is a Kotlin Multiplatform project targeting Android, iOS.
 * `/iosApp` contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform,
   you need this entry point for your iOS app. This is also where you should add SwiftUI code for
   your project.
+
+* `/shared` contains common code.
+* `/server` contains server application.
 
 ## Prepare the environment
 
@@ -56,3 +64,4 @@ them.
 
 Learn more
 about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)
+or [kotlinx.rpc] (https://github.com/Kotlin/kotlinx-rpc)
