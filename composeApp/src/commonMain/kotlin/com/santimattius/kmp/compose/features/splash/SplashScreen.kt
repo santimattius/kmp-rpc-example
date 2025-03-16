@@ -11,8 +11,8 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import kmp_compose_gradle_skeleton.composeapp.generated.resources.Res
-import kmp_compose_gradle_skeleton.composeapp.generated.resources.compose_multiplatform
+import kmp_rpc_example.composeapp.generated.resources.Res
+import kmp_rpc_example.composeapp.generated.resources.compose_multiplatform
 import kotlinx.coroutines.delay
 import org.jetbrains.compose.resources.painterResource
 

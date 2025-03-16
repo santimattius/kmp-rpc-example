@@ -38,14 +38,16 @@ kotlin {
             api(libs.androidx.appcompat)
             api(libs.androidx.core.ktx)
 
-
-
-            implementation(libs.ktor.client.okhttp)
             implementation(libs.kotlinx.coroutines.android)
 
+            implementation(libs.ktor.client.okhttp)
+
             implementation(libs.koin.android)
+
         }
         commonMain.dependencies {
+            implementation(projects.shared)
+
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material)
@@ -60,11 +62,19 @@ kotlin {
             implementation(libs.androidx.navigation.compose)
             implementation(libs.stately.common)
 
+            implementation(libs.kotlinx.coroutines.core)
+
             implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.client.logging)
+            implementation(libs.ktor.client.websockets)
             implementation(libs.ktor.serialization.kotlinx.json)
-            implementation(libs.kotlinx.coroutines.core)
+
+            implementation(libs.kotlinx.rpc.krpc.client)
+            implementation(libs.kotlinx.rpc.krpc.serialization.json)
+            implementation(libs.kotlinx.rpc.krpc.ktor.client)
+
+            implementation(libs.kermit)
 
             api(libs.koin.core)
             api(libs.koin.compose)

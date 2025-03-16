@@ -10,6 +10,7 @@ import io.ktor.client.plugins.logging.Logging
 import io.ktor.http.ContentType
 import io.ktor.http.contentType
 import io.ktor.serialization.kotlinx.json.json
+import kotlinx.rpc.krpc.ktor.client.installKrpc
 import kotlinx.serialization.json.Json
 
 internal fun ktorHttpClient(baseUrl: String) = HttpClient {
@@ -31,3 +32,9 @@ internal fun ktorHttpClient(baseUrl: String) = HttpClient {
         contentType(ContentType.Application.Json)
     }
 }
+
+internal fun ktorRcpHttpClient() = HttpClient {
+    installKrpc()
+}
+
+expect val DEV_SERVER_HOST: String

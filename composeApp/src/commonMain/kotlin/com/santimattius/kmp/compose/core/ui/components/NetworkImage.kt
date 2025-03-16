@@ -9,6 +9,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
+import co.touchlab.kermit.Logger
 import coil3.compose.LocalPlatformContext
 import coil3.compose.SubcomposeAsyncImage
 import coil3.request.ImageRequest
@@ -22,14 +23,19 @@ internal fun NetworkImage(
     contentDescription: String? = null,
 ) {
     SubcomposeAsyncImage(
-        model = ImageRequest.Builder(LocalPlatformContext.current)
-            .data(imageUrl).build(),
+        model = imageUrl,
         loading = {
             Box(contentAlignment = Alignment.Center) {
                 CircularProgressIndicator(
                     color = MaterialTheme.colorScheme.secondary,
                     modifier = Modifier.size(32.dp)
                 )
+            }
+        },
+        onError = {
+            val exception = it.result.throwable
+            Logger.e(throwable = exception) {
+                exception.message.orEmpty()
             }
         },
         contentDescription = contentDescription,
