@@ -3,6 +3,11 @@
 kotlinx.rpc is a Kotlin library for adding asynchronous Remote Procedure Call (RPC) services to your
 applications. Build your RPC with already known language constructs and nothing more!
 
+
+https://github.com/user-attachments/assets/f5b8e631-0187-41b0-8c63-9cd3efdac643
+
+
+
 ## Project
 
 This is a Kotlin Multiplatform project targeting Android, iOS.
