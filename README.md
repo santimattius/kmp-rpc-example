@@ -1,4 +1,4 @@
-# Kotlinx rpc example using KMP and Compose Multiplatform
+# Kotlinx rpc example using KMP and Compose Multiplatform (WIP ⚠️)
 
 kotlinx.rpc is a Kotlin library for adding asynchronous Remote Procedure Call (RPC) services to your
 applications. Build your RPC with already known language constructs and nothing more!
